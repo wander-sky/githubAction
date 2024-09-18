@@ -9,5 +9,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: npm install -g bats
-      - run: bats -v
+      - name: 'Resolve Project Dependencies Using Npm'
+        shell: bash
+      - run: npm install -g pnpm && pnpm -v
